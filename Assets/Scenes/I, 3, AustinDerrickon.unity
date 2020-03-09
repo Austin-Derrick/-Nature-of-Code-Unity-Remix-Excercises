@@ -146,7 +146,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 65679965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a98ca6618cd721045bee65ed23273ef9, type: 3}
+  m_Script: {fileID: 11500000, guid: cc8c56b502bceeb45aaae6d4c6526ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkerPrefab: {fileID: 1352596470915149582, guid: 4b38127ec40172d498d5b2398af78c0f,
@@ -159,7 +159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65679965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -333,7 +333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369722795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
