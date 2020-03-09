@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IntroductionFig3 : MonoBehaviour
+public class IntroExcercise3ADerrickson : MonoBehaviour
 {
-    
+
     public GameObject walkerPrefab;
     private GameObject walkerGO;
-    private WalkerIntro3 walker;
+    private WalkerEx3 walker;
 
     // Start is called before the first frame update
     void Start()
     {
         GameObject walkerGameObject = new GameObject();
-        walker = walkerGameObject.AddComponent<WalkerIntro3>();
+        walker = walkerGameObject.AddComponent<WalkerEx3>();
 
     }
 
@@ -25,10 +25,12 @@ public class IntroductionFig3 : MonoBehaviour
     }
 }
 
-public class WalkerIntro3 : MonoBehaviour
+public class WalkerEx3 : MonoBehaviour
 {
     public int x;
     public int y;
+    private float mouseY;
+    private float mouseX;
     float num;
     GameObject walkerGO;
 
@@ -45,29 +47,36 @@ public class WalkerIntro3 : MonoBehaviour
     void Update()
     {
         num = Random.Range(0f, 1f);
+        mouseX = Input.GetAxis("Mouse X");
+        mouseY = Input.GetAxis("Mouse Y");
     }
 
     public void step()
     {
-        if (num < 0.4F)
+        if (num < 0.1F)
         {
             x++;
         }
-        else if (num < 0.6F)
+        else if (num < 0.2F)
         {
             x--;
         }
-        else if (num < .8F)
+        else if (num < .3F)
         {
             y++;
         }
-        else
+        else if (num < 0.4f)
         {
             y--;
         }
+        else
+        {
+            x += Mathf.RoundToInt(mouseX);
+            y += Mathf.RoundToInt(mouseY);
+        }
         walkerGO.transform.position = new Vector3(x, y, 0F);
     }
-    
+
     public void draw()
     {
         GameObject sphere = Instantiate(walkerGO);
